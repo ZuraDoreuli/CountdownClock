@@ -1,0 +1,105 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+body {
+   font-family: Bitter;
+}
+.countdown__wrapper {
+   position: relative;
+   width: 100%;
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   justify-content: space-between;
+   padding: 0px 20px;
+}
+.countdown__image {
+   position: absolute;
+   left: 0;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -10;
+}
+.countdown__image img {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+}
+.countdown__title {
+   text-align: center;
+   margin-top: 60px;
+   font-size: 54px;
+   letter-spacing: 15px;
+   font-weight: 800;
+   color: black;
+   border-radius: 10px;
+   padding: 30px;
+   text-shadow: 2px 2px 0px #FFFFFF, 5px 4px 0px rgba(0,0,0,0.15);
+}
+.countdown__times {
+   display: flex;
+   margin-bottom: 120px;
+}
+.countdown__time {
+   width: 230px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+   padding: 20px;
+   font-size: 50px;
+   font-weight: 900;
+   color: black;
+   letter-spacing: 10px;
+   border-radius: 10px;
+   background-color: rgb(255 255 255 / 60%);
+   box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.countdown__time:not(:last-child) {
+   margin-right: 20px;
+}
+.countdown__time-text {
+   font-size: 20px;
+   margin-top: 10px;
+}
+
+@media (max-width: 1024px) {
+   .countdown__title {
+      margin-top: 30px;
+      font-size: 34px;
+      letter-spacing: 5px;
+      font-weight: 700;
+      color: black;
+      padding: 20px;
+   }
+   .countdown__times {
+      display: grid;
+      gap: 20px;
+      grid-template-columns: 1fr 1fr;
+      margin-bottom: 50px;
+   }
+   .countdown__time {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+      font-size: 36px;
+      font-weight: 800;
+      color: black;
+      letter-spacing: 10px;
+   }
+   .countdown__time-text {
+      font-size: 16px;
+   }
+}
+@media (max-width: 530px) {
+   .countdown__times {
+      align-items: center;
+      gap: 10px;
+      grid-template-columns: 1fr;
+      margin-bottom: 30px;
+   }
+}
